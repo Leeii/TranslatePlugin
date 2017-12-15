@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>Translate_Chinese_to_English</id>
+    <name>Translate Chinese to English In string.xml</name>
+    <version>1.0</version>
+    <vendor email="leeiidesu@gmail.com" url="http://www.leeiidesu.com">leeiidesu</vendor>
+
+    <description><![CDATA[
+    Translate Chinese to English In string.xml.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        1.use ctrl+W or ctrl+shift+W selected text
+        2.use ctrl+alt+H
+      ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="TranslateAction" class="com.leeiidesu.translate.TranslateAction"
+                text="Translate Chinese to English In string.xml"
+                icon="/icon/icon.png"
+                description="Translate chinese to english in string.xml">
+            <add-to-group group-id="EditorPopupMenu1" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt H"/>
+        </action>
+    </actions>
+
+</idea-plugin>
